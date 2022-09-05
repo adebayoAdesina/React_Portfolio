@@ -39,11 +39,18 @@ const Services = () => {
           <ServiceCard
             emoji={Humble}
             heading={"UI/UX"}
-            detail={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, perspiciatis."}
+            detail={
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, perspiciatis."
+            }
           />
-
         </ServiceCardThree>
-        <Blur style={{backroundColor: 'var(--purple)', left: '14rem', top: '8rem'}}/>
+        <Blur
+          style={{
+            backroundColor: "var(--purple)",
+            left: "14rem",
+            top: "8rem",
+          }}
+        />
       </ServiceRight>
     </StyledServices>
   );
