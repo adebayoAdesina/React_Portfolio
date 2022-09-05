@@ -3,12 +3,13 @@ import styled from "styled-components";
 import GitHub from "../assets/img/github.png";
 import Linkedin from "../assets/img/linkedin.png";
 import Instagram from "../assets/img/instagram.png";
-import Vector1 from '../assets/img/Vector1.png';
-import Vector2 from '../assets/img/Vector2.png';
-import Boy from '../assets/img/boy.png';
-import Thumbup from '../assets/img/thumbup.png';
-import Crown from '../assets/img/crown.png';
-import Glassesimoji from '../assets/img/glassesimoji.png';
+import Vector1 from "../assets/img/Vector1.png";
+import Vector2 from "../assets/img/Vector2.png";
+import Boy from "../assets/img/boy.png";
+import Thumbup from "../assets/img/thumbup.png";
+import Crown from "../assets/img/crown.png";
+import Glassesimoji from "../assets/img/glassesimoji.png";
+import FloatingDiv from "./FloatingDiv";
 
 const Intro = () => {
   return (
@@ -30,9 +31,20 @@ const Intro = () => {
         </div>
       </IntroLeft>
       <IntroRight>
-        <img src={Vector1} alt="vector1" />
-        <img src={Vector2} alt="vector2" />
-        <img src={Boy} alt="boy" />
+        <img src={Vector1} alt="vector1" className="image1" />
+        <img src={Vector2} alt="vector2" className="image2" />
+        <img src={Boy} alt="boy" className="image3" />
+        <img src={Glassesimoji} alt="Glassesimoji" className="image4" />
+        <FloatingOne>
+          <FloatingDiv image={Crown} text1={"Web"} text2={"Developer"} />
+        </FloatingOne>
+        <FloatingTwo>
+          <FloatingDiv image={Thumbup} text1={"Best Design"} text2={"Award"} />
+        </FloatingTwo>
+
+        {/* blur div */}
+        <Blur style={{backgroundColor: 'rgb(238 210 255)'}}/>
+        <Blur style={{backgroundColor: '#c1f5ff', top: '17rem', width: '21rem', height: '11rem', left:'-9rem'}}/>
       </IntroRight>
     </StyledIntro>
   );
@@ -81,7 +93,7 @@ const IntroLeft = styled.div`
   }
   .icons > * {
     width: 3rem;
-    :hover{
+    :hover {
       cursor: pointer;
     }
   }
@@ -91,25 +103,58 @@ const IntroRight = styled.div`
   flex: 1;
   position: relative;
   * {
-    position: absolute;
     z-index: 1;
   }
 
-  *:nth-child(1) {
+  .image1 {
+    position: absolute;
     transform: scale(0.69);
     left: -15%;
     top: -9%;
   }
-  *:nth-child(2) {
+  .image2 {
+    position: absolute;
     transform: scale(0.67);
     left: -3rem;
     top: -4.6rem;
   }
-  *:nth-child(3) {
+  .image3 {
+    position: absolute;
     transform: scale(1.4);
     left: 28%;
-    /* top: -4.6rem; */
+  }
+  .image4 {
+    position: absolute;
+    top: -19%;
+    transform: scale(0.6);
+    left: -25%;
+    border-radius: 50%;
+    padding: 0;
   }
 `;
 
+const FloatingOne = styled.div`
+  top: -4%;
+  left: 68%;
+  position: absolute;
+`;
+
+const FloatingTwo = styled.div`
+  top: 18.5rem;
+  left: 0rem;
+  position: absolute;
+`;
+
+const Blur = styled.div`  
+  content: '';
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(72px);
+  z-index: -9;
+  top: -18%;
+  left: 56%;
+`
 export default Intro;
