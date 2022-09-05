@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HeartEmoji from "../assets/img/heartemoji.png";
 import Glasses from "../assets/img/glasses.png";
 import Humble from "../assets/img/humble.png";
-import { Blur } from "./styled";
+import { Blur, ServiceLeft } from "./styled";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -62,32 +62,6 @@ const StyledServices = styled.div`
   height: 90vh;
   margin-bottom: 8rem;
   margin-top: 8rem;
-`;
-const ServiceLeft = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  flex: 1;
-  span:nth-child(1) {
-    color: var(--black);
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  span:nth-child(2) {
-    color: var(--orange);
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  span:nth-child(3) {
-    color: var(--grey);
-    font-size: 16px;
-    line-height: 2;
-    margin-top: 1rem;
-  }
-  button {
-    width: 10rem;
-    margin-top: 1.4rem;
-  }
 `;
 const ServiceRight = styled.div`
   flex: 1;
