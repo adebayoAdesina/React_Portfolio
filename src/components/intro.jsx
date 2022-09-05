@@ -10,6 +10,7 @@ import Thumbup from "../assets/img/thumbup.png";
 import Crown from "../assets/img/crown.png";
 import Glassesimoji from "../assets/img/glassesimoji.png";
 import FloatingDiv from "./FloatingDiv";
+import { Blur } from "./styled";
 
 const Intro = () => {
   return (
@@ -145,16 +146,5 @@ const FloatingTwo = styled.div`
   position: absolute;
 `;
 
-const Blur = styled.div`  
-  content: '';
-  position: absolute;
-  width: 22rem;
-  height: 14rem;
-  border-radius: 50%;
-  background: #edd0ff;
-  filter: blur(72px);
-  z-index: -9;
-  top: -18%;
-  left: 56%;
-`
+
 export default Intro;
