@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Toggle from "./Toggle";
 
 const Navbar = () => {
   return (
     <Nav>
       <NavLeft>
         <div>James</div>
-        <span>toggle</span>
+        <Toggle />
       </NavLeft>
       <NavRight>
         <div>
@@ -63,7 +64,7 @@ const NavRight = styled.div`
     color: var(--orange);
   }
   button {
-      flex: 2
+    flex: 2;
   }
 `;
 
