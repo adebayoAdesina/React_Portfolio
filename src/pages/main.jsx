@@ -1,4 +1,5 @@
 import React from 'react'
+import Contact from '../components/Contact'
 import Experience from '../components/Experience'
 import Intro from '../components/intro'
 import Navbar from '../components/navbar'
@@ -17,6 +18,7 @@ const MainPage = () => {
       <Works/>
       <Portfolio/>
       <Testimonial/>
+      <Contact/>
     </div>
   )
 }

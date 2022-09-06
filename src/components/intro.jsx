@@ -135,12 +135,14 @@ const FloatingOne = styled.div`
   top: -4%;
   left: 68%;
   position: absolute;
+  z-index: 1000 !important;
 `;
 
 const FloatingTwo = styled.div`
   top: 18.5rem;
   left: 0rem;
   position: absolute;
+  z-index: 1000 !important;
 `;
 
 

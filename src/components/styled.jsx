@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Blur = styled.div`  
-  z-index: -1000;
+  z-index: -1000 !important;
   width: 22rem;
   height: 14rem;
   border-radius: 50%;
@@ -9,7 +9,6 @@ export const Blur = styled.div`
   filter: blur(72px);
   top: -18%;
   left: 56%;
-  position: absolute;
 `;
 
 export const ServiceLeft = styled.div`
