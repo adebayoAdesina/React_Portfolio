@@ -5,6 +5,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "@emailjs/browser": "^3.7.0",
+    "@iconscout/react-unicons": "^1.1.6",
     "cra-template": "1.2.0",
     "emailjs": "^4.0.1",
     "emailjs-com": "^3.2.0",
