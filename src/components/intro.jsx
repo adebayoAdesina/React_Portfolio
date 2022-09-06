@@ -103,29 +103,26 @@ const IntroLeft = styled.div`
 const IntroRight = styled.div`
   flex: 1;
   position: relative;
-  * {
+  & > * {
     z-index: 1;
+    position: absolute;
   }
 
   .image1 {
-    position: absolute;
     transform: scale(0.69);
     left: -15%;
     top: -9%;
   }
   .image2 {
-    position: absolute;
     transform: scale(0.67);
     left: -3rem;
     top: -4.6rem;
   }
   .image3 {
-    position: absolute;
     transform: scale(1.4);
     left: 28%;
   }
   .image4 {
-    position: absolute;
     top: -19%;
     transform: scale(0.6);
     left: -25%;

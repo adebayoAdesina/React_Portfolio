@@ -15,7 +15,7 @@ const Portfolio = () => {
         spaceBetween={30}
         slidesPerView={3}
         grabCursor={true}
-        className="sliders" 
+        className="sliders"
       >
         <SwiperSlide>
           <img src={Sidebar} alt="Sidebar" />
@@ -39,7 +39,7 @@ const StyledPortfolio = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  height: 70vh;
   span:nth-of-type(1) {
     color: var(--black);
     font-size: 2.5rem;

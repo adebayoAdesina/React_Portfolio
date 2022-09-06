@@ -9,6 +9,7 @@ export const Blur = styled.div`
   filter: blur(72px);
   top: -18%;
   left: 56%;
+  position: absolute;
 `;
 
 export const ServiceLeft = styled.div`
