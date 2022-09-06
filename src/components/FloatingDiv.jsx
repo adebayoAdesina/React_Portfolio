@@ -23,6 +23,7 @@ const Floating = styled.div`
   background-color: #fff;
   box-shadow: var(--boxShadow);
   border-radius: 17px;
+  z-index: 1000;
   align-items: center;
   position: absolute;
   padding: 0.7rem 1.2rem;

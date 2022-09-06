@@ -23,6 +23,7 @@ const Cards = styled.div`
   box-shadow: var(--boxShadow);
   border-radius: 20px;
   padding: 0px 26px 2rem 26px;
+  z-index: 10;
   img {
     transform: scale(0.5);
     margin-bottom: -3rem;

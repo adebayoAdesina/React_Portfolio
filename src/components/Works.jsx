@@ -50,7 +50,7 @@ const Works = () => {
 const StyledWork = styled.div`
   padding: 0rem 3rem;
   display: flex;
-  height: 90vh;
+  height: 70vh;
   margin: 4rem;
 `;
 const WorkLeft = styled(ServiceLeft)``;
