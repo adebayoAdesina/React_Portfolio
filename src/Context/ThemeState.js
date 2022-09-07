@@ -2,8 +2,8 @@ import { useReducer } from "react";
 import ThemeReducer from "./ThemeReducer";
 import ThemeContext from "./Themecontext";
 
+const initialState = { darkMode: false };
 const ThemeProvider = ({ children }) => {
-  const initialState = { darkMode: true };
 
   const [state, dispatch] = useReducer(ThemeReducer, initialState);
   return (
