@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Blur = styled.div`  
-  z-index: -1000 !important;
+  z-index: 0 !important;
   width: 22rem;
   height: 14rem;
   border-radius: 50%;
@@ -43,5 +43,5 @@ export const BlackCircle = styled.div`
     height: 13rem;
     width: 13rem;
     border-radius: 100%;
-    z-index: -1;
+    z-index: 1;
 `;

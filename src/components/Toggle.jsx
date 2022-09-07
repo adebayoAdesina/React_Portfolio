@@ -9,30 +9,26 @@ const Toggle = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  
-
-  var check = false;
+  // var check = false;
   const handleClick = () => {
-    console.log(theme)
-    theme.dispatch({ type: "toggle" })
-      // switch (check) {
-      //   case false:
-      //     theme.dispatch({ type: "toggle" })
-      //     check =true;
-      //     break;
-      
-      //   default:
-      //     theme.dispatch({ type: "" });
-      //     check =false;
-      //     break;
-      // }
+    theme.dispatch({ type: "toggle" });
+    // switch (check) {
+    //   case false:
+    //     theme.dispatch({ type: "toggle" })
+    //     check =true;
+    //     break;
+
+    //   default:
+    //     theme.dispatch({ type: "" });
+    //     check =false;
+    //     break;
+    // }
   };
   return (
     <StyledToggle onClick={handleClick}>
       <Moon />
       <Sun />
-      <ToggleButton style={ darkMode ?{left: "2px"}:
-    {right: "2px"}}/>
+      <ToggleButton style={darkMode ? { left: "2px" } : { right: "2px" }} />
     </StyledToggle>
   );
 };
@@ -53,10 +49,9 @@ const StyledToggle = styled.div`
 `;
 
 const ToggleButton = styled.div`
-    border-radius: 100%;
-    background-color: var(--orange);
-    position: absolute;
-    
-  `;
+  border-radius: 100%;
+  background-color: var(--orange);
+  position: absolute;
+`;
 
 export default Toggle;

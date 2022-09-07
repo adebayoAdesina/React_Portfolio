@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import GitHub from "../assets/img/github.png";
 import Linkedin from "../assets/img/linkedin.png";
@@ -11,13 +11,19 @@ import Crown from "../assets/img/crown.png";
 import Glassesimoji from "../assets/img/glassesimoji.png";
 import FloatingDiv from "./FloatingDiv";
 import { Blur } from "./styled";
+import ThemeContext from "../Context/Themecontext";
+import { motion } from "framer-motion";
+import { Transition } from "../Animation/animate";
 
 const Intro = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <StyledIntro>
       <IntroLeft>
         <div>
-          <span>Hy! I Am</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>James</span>
           <span>
             Frontend Developer with high level of experience in web designing
@@ -35,17 +41,40 @@ const Intro = () => {
         <img src={Vector1} alt="vector1" className="image1" />
         <img src={Vector2} alt="vector2" className="image2" />
         <img src={Boy} alt="boy" className="image3" />
-        <img src={Glassesimoji} alt="Glassesimoji" className="image4" />
-        <FloatingOne>
+        <motion.img
+          initial={{ left: "-36%" }}
+          animate={{ left: "-24%" }}
+          transition={Transition}
+          src={Glassesimoji}
+          alt="Glassesimoji"
+          className="image4"
+        />
+        <FloatingOne
+          initial={{ top: "-4%" }}
+          animate={{ left: "74%" }}
+          transition={Transition}
+        >
           <FloatingDiv image={Crown} text1={"Web"} text2={"Developer"} />
         </FloatingOne>
-        <FloatingTwo>
+        <FloatingTwo
+          initial={{ top: "18.5rem", left: '10%' }}
+          animate={{ left: "0%" }}
+          transition={Transition}
+        >
           <FloatingDiv image={Thumbup} text1={"Best Design"} text2={"Award"} />
         </FloatingTwo>
 
         {/* blur div */}
-        <Blur style={{backgroundColor: 'rgb(238 210 255)'}}/>
-        <Blur style={{backgroundColor: '#c1f5ff', top: '17rem', width: '21rem', height: '11rem', left:'-9rem'}}/>
+        <Blur style={{ backgroundColor: "rgb(238 210 255)" }} />
+        <Blur
+          style={{
+            backgroundColor: "#c1f5ff",
+            top: "17rem",
+            width: "21rem",
+            height: "11rem",
+            left: "-9rem",
+          }}
+        />
       </IntroRight>
     </StyledIntro>
   );
@@ -131,19 +160,18 @@ const IntroRight = styled.div`
   }
 `;
 
-const FloatingOne = styled.div`
+const FloatingOne = styled(motion.div)`
   top: -4%;
   left: 68%;
   position: absolute;
   z-index: 1000 !important;
 `;
 
-const FloatingTwo = styled.div`
+const FloatingTwo = styled(motion.div)`
   top: 18.5rem;
   left: 0rem;
   position: absolute;
   z-index: 1000 !important;
 `;
-
 
 export default Intro;

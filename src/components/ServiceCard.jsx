@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
+import ThemeContext from "../Context/Themecontext";
 
 const ServiceCard = ({ emoji, heading, detail }) => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <Cards>
       <img src={emoji} alt="emoji" />
       <span>{heading}</span>
-      <span>{detail}</span>
+      <span style={{color: darkMode ? 'var(--orange)' : ''}}>{detail}</span>
       <button>Learn More</button>
     </Cards>
   );

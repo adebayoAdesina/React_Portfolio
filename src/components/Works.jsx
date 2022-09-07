@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { ServiceLeft, Blur, BlackCircle } from "./styled";
 import Upwork from "../assets/img/Upwork.png";
@@ -6,12 +6,20 @@ import Fiverr from "../assets/img/fiverr.png";
 import Amazon from "../assets/img/amazon.png";
 import Shopify from "../assets/img/Shopify.png";
 import Facebook from "../assets/img/Facebook.png";
+import ThemeContext from "../Context/Themecontext";
+import { Transition } from "../Animation/animate";
+import { motion } from "framer-motion";
 
 const Works = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <StyledWork>
       <WorkLeft>
-        <span>Works for All these</span>
+        <span style={{ color: darkMode ? "white" : "" }}>
+          Works for All these
+        </span>
         <span>Brands & Clients</span>
         <span>
           Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit.
@@ -23,7 +31,10 @@ const Works = () => {
         <Blur style={{ backgroundColor: "#abf1ff94" }} />
       </WorkLeft>
       <WorkRight>
-        <MainCircle>
+        <MainCircle  initial={{ rotate: 45 }}
+          animate={{ rotate: 0 }}
+          viewport={{margin: '-40px'}}
+          transition={Transition} >
           <SecondCircle>
             <img src={Upwork} alt="upwork" />
           </SecondCircle>
@@ -41,7 +52,7 @@ const Works = () => {
           </SecondCircle>
         </MainCircle>
         <BlueCircle />
-        <YellowCircle />
+        <YellowCircle/>
       </WorkRight>
     </StyledWork>
   );
@@ -58,13 +69,14 @@ const WorkRight = styled.div`
   position: relative;
   flex: 1;
 `;
-const MainCircle = styled.div`
+const MainCircle = styled(motion.div)`
   left: 9rem;
   position: relative;
   width: 18rem;
   height: 18rem;
   border-radius: 100%;
   box-shadow: var(--smboxShadow);
+  z-index: 2;
   top: 2rem;
   background: #ffffff;
   & > * {
@@ -107,13 +119,13 @@ const SecondCircle = styled.div`
   }
 `;
 const BlueCircle = styled(BlackCircle)`
-    background-color: #1949b8;
-    left: 18rem;
-    top: 0rem;
+  background-color: #1949b8;
+  left: 18rem;
+  top: 0rem;
 `;
 const YellowCircle = styled(BlackCircle)`
-background-color: #f5c32c;
-    left: 18rem;
-    top: 8rem;
+  background-color: #f5c32c;
+  left: 18rem;
+  top: 8rem;
 `;
 export default Works;

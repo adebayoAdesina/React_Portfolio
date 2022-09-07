@@ -1,21 +1,25 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
+import ThemeContext from "../Context/Themecontext";
 
 const Experience = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <StyledExperience>
       <Achievement>
-        <Circle>8+</Circle>
+        <Circle style={{color: darkMode ? 'black' : ''}}>8+</Circle>
         <span>years</span>
         <span>Experience</span>
       </Achievement>
       <Achievement>
-        <Circle>20+</Circle>
+        <Circle style={{color: darkMode ? 'black' : ''}}>20+</Circle>
         <span>Completed</span>
         <span>Projects</span>
       </Achievement>
       <Achievement>
-        <Circle>5+</Circle>
+        <Circle style={{color: darkMode ? 'black' : ''}}>5+</Circle>
         <span>Companies</span>
         <span>Work</span>
       </Achievement>

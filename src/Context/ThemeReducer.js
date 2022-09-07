@@ -1,17 +1,12 @@
 const ThemeReducer = (state, action) => {
+  // console.log(action.type)
   switch (action.type) {
     case "toggle":
       return {
-        // state,
         darkMode: !state.darkMode,
       };
 
     default:
-      // return {
-      //   // state,
-      //   // darkMode: state.darkMode,
-      // };
-
       return state;
     
   }
