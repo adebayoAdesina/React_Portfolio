@@ -27,6 +27,9 @@ const StyledFooter = styled.div`
   margin: -0.5rem -3.5rem;
   position: relative;
   margin-top: -7rem;
+  @media screen and (max-width: 480px) {
+    transform: scale(0.7);
+  }
 `;
 const FooterBackground = styled.img`
   width: 100%;
@@ -42,9 +45,16 @@ const FooterContent = styled.div`
   margin-top: 4rem;
   gap: 2rem;
   color: white;
+  @media screen and (max-width: 480px) {
+      gap: 1rem;
+      margin-left: -2.7rem;
+    }
 `;
 const Icons = styled.div`
-display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
+  @media screen and (max-width: 480px) {
+      width: 40%;
+    }
 `;
 export default Footer;

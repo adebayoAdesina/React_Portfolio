@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Toggle from "./Toggle";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
-    <Nav>
+    <Nav id="Navbar">
       <NavLeft>
         <div>James</div>
         <Toggle />
@@ -12,11 +13,46 @@ const Navbar = () => {
       <NavRight>
         <div>
           <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Experience</li>
-            <li>Portfolio</li>
-            <li>Testimonials</li>
+            <Link
+              to="Navbar"
+              smooth={true}
+              activeClass="activeClass"
+              spy={true}
+            >
+              <li>Home</li>
+            </Link>
+            <Link
+              to="Services"
+              smooth={true}
+              activeClass="activeClass"
+              spy={true}
+            >
+              <li>Services</li>
+            </Link>
+            <Link
+              to="Experience"
+              smooth={true}
+              activeClass="activeClass"
+              spy={true}
+            >
+              <li>Experience</li>
+            </Link>
+            <Link
+              to="Portfolio"
+              smooth={true}
+              activeClass="activeClass"
+              spy={true}
+            >
+              <li>Portfolio</li>
+            </Link>
+            <Link
+              to="Testimonial"
+              smooth={true}
+              activeClass="activeClass"
+              spy={true}
+            >
+              <li>Testimonials</li>
+            </Link>
           </ul>
         </div>
         <button className="button">Contact</button>
@@ -55,16 +91,22 @@ const NavRight = styled.div`
     display: flex;
     gap: 2rem;
     margin-right: 4rem;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
   }
-  div > ul > li {
+  div > ul > a > li {
     list-style: none;
   }
-  div > ul > li:hover {
+  div > ul > a > li:hover {
     cursor: pointer;
     color: var(--orange);
   }
   button {
     flex: 2;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
   }
 `;
 

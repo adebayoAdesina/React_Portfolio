@@ -31,10 +31,12 @@ const Works = () => {
         <Blur style={{ backgroundColor: "#abf1ff94" }} />
       </WorkLeft>
       <WorkRight>
-        <MainCircle  initial={{ rotate: 45 }}
+        <MainCircle
+          initial={{ rotate: 45 }}
           animate={{ rotate: 0 }}
-          viewport={{margin: '-40px'}}
-          transition={Transition} >
+          viewport={{ margin: "-40px" }}
+          transition={Transition}
+        >
           <SecondCircle>
             <img src={Upwork} alt="upwork" />
           </SecondCircle>
@@ -52,7 +54,7 @@ const Works = () => {
           </SecondCircle>
         </MainCircle>
         <BlueCircle />
-        <YellowCircle/>
+        <YellowCircle />
       </WorkRight>
     </StyledWork>
   );
@@ -63,11 +65,36 @@ const StyledWork = styled.div`
   display: flex;
   height: 70vh;
   margin: 4rem;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    margin-top: -15rem;
+  }
 `;
-const WorkLeft = styled(ServiceLeft)``;
+const WorkLeft = styled(ServiceLeft)`
+  @media screen and (max-width: 480px) {
+    transform: scale(0.6);
+    left: -8rem;
+
+    span:nth-of-type(1) {
+      margin-bottom: -5.2rem;
+    }
+    span:nth-of-type(2) {
+      margin-bottom: -5.2rem;
+    }
+    span:nth-of-type(3) {
+      margin-bottom: -9rem;
+    }
+
+  }
+`;
 const WorkRight = styled.div`
   position: relative;
   flex: 1;
+  @media screen and (max-width: 480px) {
+      transform: scale(0.6);
+      margin-top: -16rem;
+      left: -8rem;
+    }
 `;
 const MainCircle = styled(motion.div)`
   left: 9rem;

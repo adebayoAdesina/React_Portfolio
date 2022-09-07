@@ -84,6 +84,10 @@ const StyledIntro = styled.div`
   display: flex;
   height: 77vh;
   margin-top: 6rem;
+  @media screen and (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+    }
 `;
 const IntroLeft = styled.div`
   display: flex;
@@ -92,6 +96,11 @@ const IntroLeft = styled.div`
   flex-direction: column;
   flex: 1;
   gap: 2;
+  @media screen and (max-width: 480px) {
+      transform: scale(0.65);
+      left: -3.5rem;
+      top: -6rem
+    }
   div:nth-child(1) {
     display: flex;
     flex-direction: column;
@@ -132,6 +141,9 @@ const IntroLeft = styled.div`
 const IntroRight = styled.div`
   flex: 1;
   position: relative;
+  @media screen and (max-width: 480px) {
+     margin-top: -3rem;
+    }
   & > * {
     z-index: 1;
     position: absolute;
@@ -141,15 +153,27 @@ const IntroRight = styled.div`
     transform: scale(0.69);
     left: -15%;
     top: -9%;
+    @media screen and (max-width: 480px) {
+      transform: scale(0.63);
+      left: -6rem;
+    }
   }
   .image2 {
     transform: scale(0.67);
     left: -3rem;
     top: -4.6rem;
+    @media screen and (max-width: 480px) {
+      transform: scale(0.5);
+      left: -8rem;
+    }
   }
   .image3 {
     transform: scale(1.4);
     left: 28%;
+    @media screen and (max-width: 480px) {
+      transform: scale(1.2);
+      left: 2rem;
+    }
   }
   .image4 {
     top: -19%;
@@ -157,6 +181,10 @@ const IntroRight = styled.div`
     left: -25%;
     border-radius: 50%;
     padding: 0;
+    @media screen and (max-width: 480px) {
+      transform: scale(0.5);
+      left: -8rem;
+    }
   }
 `;
 
@@ -165,6 +193,10 @@ const FloatingOne = styled(motion.div)`
   left: 68%;
   position: absolute;
   z-index: 1000 !important;
+  @media screen and (max-width: 480px) {
+      transform: scale(0.55);
+      
+    }
 `;
 
 const FloatingTwo = styled(motion.div)`
@@ -172,6 +204,10 @@ const FloatingTwo = styled(motion.div)`
   left: 0rem;
   position: absolute;
   z-index: 1000 !important;
+  @media screen and (max-width: 480px) {
+      transform: scale(0.55);
+      left: -8rem;
+    }
 `;
 
 export default Intro;

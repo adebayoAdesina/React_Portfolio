@@ -12,7 +12,7 @@ const Portfolio = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-    <StyledPortfolio>
+    <StyledPortfolio id="Portfolio">
       <span style={{color: darkMode ? 'white' : ''}}>Recent Projects</span>
       <span style={{color: darkMode ? 'var(--orange)' : ''}}>Portfolio</span>
       <Swiper
@@ -69,6 +69,9 @@ const StyledPortfolio = styled.div`
     filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
     border-radius: 19px;
   }
+  @media screen and (max-width: 480px) {
+      margin-top: 18rem;
+    }
 `;
 
 export default Portfolio;

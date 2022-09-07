@@ -14,7 +14,7 @@ const Services = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-    <StyledServices>
+    <StyledServices id='Services'>
       <ServiceLeft>
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
@@ -80,25 +80,50 @@ const StyledServices = styled.div`
   height: 90vh;
   margin-bottom: 8rem;
   margin-top: 8rem;
+  @media screen and (max-width: 480px) {
+     flex-direction: column;
+     margin-top: 22rem;
+    }
 `;
 const ServiceRight = styled.div`
   flex: 1;
 
   position: relative;
+  @media screen and (max-width: 480px) {
+      transform: scale(0.5);
+      left: -8rem;
+      display: flex;
+      flex-direction: column;
+    }
 `;
 
 const ServiceCardOne = styled(motion.div)`
   left: 14rem;
   position: absolute;
+  @media screen and (max-width: 480px) {
+      margin-top: -30rem;
+      transform: scale(1.3);
+      left: 10rem;
+    }
 `;
 const ServiceCardTwo = styled(motion.div)`
   top: 12rem;
   left: -4rem;
   position: absolute;
+  @media screen and (max-width: 480px) {
+      margin-top: -17rem;
+      transform: scale(1.3);
+      margin-left: 18rem;
+    }
 `;
 const ServiceCardThree = styled(motion.div)`
   position: absolute;
   left: 12rem;
   top: 20rem;
+  @media screen and (max-width: 480px) {
+      margin-top: -3rem;
+      transform: scale(1.3);
+      margin-left: 2rem;
+    }
 `;
 export default Services;

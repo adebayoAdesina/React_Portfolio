@@ -7,7 +7,7 @@ const Experience = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-    <StyledExperience>
+    <StyledExperience id='Experience'>
       <Achievement>
         <Circle style={{color: darkMode ? 'black' : ''}}>8+</Circle>
         <span>years</span>
@@ -34,6 +34,11 @@ const StyledExperience = styled.div`
   gap: 5rem;
   height: 30vh;
   margin-bottom: 8rem;
+  @media screen and (max-width: 480px) {
+      margin-top: 35rem;
+      transform: scale(0.6);
+      left: 10rem;
+    }
 `;
 const Achievement = styled.div`
   display: flex;

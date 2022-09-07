@@ -41,8 +41,8 @@ const Contact = () => {
             placeholder="Email"
           />
           <textarea name="message" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="Send" className="button" />
-        <span>{done && 'Thanks for contacting'}</span>
+          <input type="submit" value="Send" className="button" />
+          <span>{done && "Thanks for contacting"}</span>
         </form>
       </ContactRight>
     </StyledContact>
@@ -54,6 +54,13 @@ const StyledContact = styled.div`
   display: flex;
   height: 80vh;
   margin-top: 4rem;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    margin-bottom: 7rem;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 `;
 const ContactLeft = styled.div`
   & > * {
@@ -61,6 +68,9 @@ const ContactLeft = styled.div`
     font-weight: bold;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 480px) {
+      margin-left: -5rem;
+    }
   }
 
   span:nth-of-type(2) {

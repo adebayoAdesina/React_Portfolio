@@ -41,7 +41,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <StyledTestimonial>
+    <StyledTestimonial id="Testimonial">
       <TestimonialHeading>
         <span>Clients always get</span>
         <span> Exceptional Work </span>
@@ -117,6 +117,10 @@ const StyledTestimonial = styled.div`
   .testimonial span {
     color: var(--gray);
   }
+  @media screen and (max-width: 480px) {
+    transform: scale(0.7);
+    margin-top: -1rem;
+  }
 `;
 const TestimonialHeading = styled.div`
   align-self: start;
@@ -126,6 +130,9 @@ const TestimonialHeading = styled.div`
   }
   span:nth-of-type(2) {
     color: var(--orange);
+  }
+  @media screen and (max-width: 480px) {
+    margin-left: -6rem;
   }
 `;
 export default Testimonial;
